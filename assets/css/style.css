@@ -1,1 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (min-width:600px) 
+    {    
+        body{
+        display: grid;
+        grid-template-areas: 
+        'hd hd'
+        'mn mn'
+        'ft ft';
+    }
+    body::selection{
+        background-color: whitesmoke;
+        color: brown;
+    }
+    header{
+        height: 8vh;
+        width: 100%;
+        font-family:  sans-serif;
+        background-color: darkslategrey;
+        display: grid;
+        grid-area: hd;
+        position: fixed;
+        top: 0px;
+        z-index: 1;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    header nav{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav #logo{
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 30px;
+    }
+    header nav #logo .log{
+        padding: 0px 20px;
+    }
+    header nav #logo #sname{
+        font-size: 22px;
+        letter-spacing: 2px;
+        text-wrap: nowrap;
+    }
+    header nav #menu{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        right: 20px;
+    }
+    header nav #menu li{
+        list-style-type: none;
+        display: flex;
+        padding: 0px 20px;
+    }
+    header nav #menu li a{
+        font-size: 20px;
+    }
+    header nav #menu li a:hover{
+        color: black;
+    }
+    main{
+        width: 100%;
+        display: grid;
+        grid-area: mn;
+        background-color: cornflowerblue;
+    }
 
+    main #home{
+        height: 100vh;
+        background-image: url(bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        background-color: bisque;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main #home h1{
+        font-size: 55px;
+        font-family: papyrus;
+        color: black;
+        text-align: center;
+        text-shadow: 0px 0px 8px white;
+    }
+    main #home h1 #white{
+        color: white;
+        text-shadow: 0px 0px 8px black;
+    }
+    main #home h1 #black{
+        text-wrap: nowrap;
+    }
+    main #home h6{
+        font-size: 31px;
+        text-shadow: 0px 0px 12px black;
+        font-family: Brush Script MT;
+        color: cornsilk;
+    }
+    main #home #button{
+        height: 45px;
+        width: 170px;
+        background-color: darkslategrey;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        box-shadow: 0px 0px 5px black;
+    }
+    main #home #button:hover{
+        box-shadow: 0px 0px 10px white; 
+    }
+    main #home #button:focus{
+        box-shadow: 0px 0px 0px;
+    }
+    main #home .homecontents{
+        padding-bottom: 40px;
+    }
+    #shop,#popular{
+        height: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 10vh;
+        position: relative;
+    }
+    .subhead{
+        font-family: Roboto;
+        font-size: 55px;
+        font-weight: bolder;
+        align-self: flex-start;
+        padding-left: 100px;
+    }
+    #shop #categories{
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #shop #categories ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px 30px;
+    }
+
+    #shop #categories ul .option{
+        list-style-type: none;
+        margin: 50px 0px;
+        height: 50px;
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: darkslategrey;
+        font-size: 23px;
+        font-weight: bolder;
+        border: 3px solid darkslategrey;
+        border-radius: 10px;
+    }
+    #shop #categories ul .option:hover,#shop #categories ul .option:focus{
+        background-color: darkslategrey;
+        color: white;
+        cursor: pointer;
+    }
+
+    #popular #products{
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #popular #products ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #popular #products ul li{
+        list-style-type: none;
+        margin: 50px 5px;
+        height: 300px;
+        width: 230px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background-color: white;
+        color: darkslategrey;
+        font-size: 18px;
+        font-weight: bolder;
+        border: 2px solid darkslategrey;
+        border-radius: 10px;
+        position: relative;
+        transition: all .3s ease-in-out;
+    }
+    #popular #products ul li:hover{
+        box-shadow: 0px 0px 10px darkslategrey;
+        /* height: 295px;
+        width: 225px; */
+    }
+    #popular #products ul li img{
+        height: 200px;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        image-orientation: from-image;
+        top: 0px;
+        border-radius: 7px 7px 0px 0px;
+        align-self: center;
+    }
+
+    #popular #products ul li figcaption{
+        position: relative;
+        left: 10px;
+    }
+    #popular #products ul li button{
+        height: 35px;
+        width: 80%;
+        margin: 5px 5px 5px 5px;
+        background-color: darkslategrey;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        align-self: center;
+        transition: all .3s ease-in-out;
+    }
+    #popular #products ul li button:hover,#popular #products ul li button:focus{
+        background-color: white;
+        color: darkslategrey;
+        font-size: 15px;
+        font-weight: bold;
+        border: 1px solid darkslategrey;
+        cursor: pointer;
+    }
+    footer{
+        height: 10vh;
+        width: 100%;
+        display: grid;
+        grid-area: ft;
+        background-color: darkslategrey;
+        place-content: center center;
+        font-family:  sans-serif;
+        font-size: 20px;
+    }
+}
